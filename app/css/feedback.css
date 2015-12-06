@@ -1,0 +1,55 @@
+.page-feedback{;
+    padding-top: 31px;
+    font-family: "OpenSansRegular";
+    color: #727070;
+    font-size: 14px;
+}
+
+.pbx-fd{
+    font-family: "OpenSansLight";
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.form{
+ height: 39px;
+ width: 192px;
+ padding: 5px;
+  border: 1px solid #d6d5d3;
+  border-radius: 3px;
+  }
+.form-text{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.feedback-name{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.feedback-mail{
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.fd-message{
+    width: 403px;
+    height: 181px;
+    margin-bottom: 14px;
+}
+
+textarea[placeholder],
+input[placeholder]{
+    font-family: "OpenSansLight";
+    font-size: 12px;
+    color: #c7c6c6;
+    resize: none;
+}
+
+.feed-box{
+    display: block;
+    width: 403px;
+    margin: 0 auto;
+}

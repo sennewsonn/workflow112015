@@ -150,6 +150,7 @@ body{
 }
 
 .butt-active a{
+	display: block;
   background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
@@ -160,7 +161,7 @@ body{
   border-right: 1px solid #40ab91;
   border-left: 1px solid #40ab91;
   border-bottom: 1px solid #2fa185;
-
+min-height: 54px;
 }
 
 
@@ -169,7 +170,6 @@ body{
 }
 
 .butt-fback a{
-	border-top: 1px solid #eeeeee;
   line-height: 50px;
  }
 .main-bar-nav li:last-child a{
