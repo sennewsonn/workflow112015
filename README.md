@@ -1,7 +1,15 @@
-> Инструкции по установке моего приложения
+### Installation
 
-1. git clone https://github.com/sennewsonn/workflow112015.git site
-2. cd site
-3. bower i
-4. npm i
-5. gulp
+You need Gulp installed globally:
+
+```sh
+$ npm i -g gulp
+```
+
+```sh
+$ git clone https://github.com/sennewsonn/workflow112015.git site
+$ cd site
+$ bower i
+$ npm i
+$ gulp
+```
