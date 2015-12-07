@@ -595,6 +595,7 @@ content: " ";
 	font-size: 15px;
 	color: #727070;
 	width: 550px;
+	margin-top: 5px;
 }
 .box-list-co{
 	font-family: "OpenSansRegular";
@@ -620,8 +621,7 @@ content: " ";
 
 
 .tit-two{
-	margin-top: -1px;
-
+	
 }
 
 
