@@ -2,6 +2,10 @@
   "name": "site",
   "version": "0.1.0",
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "jquery": "1.8",
+>>>>>>> 7d62c72cebd1539443546865cbaffe24bd870d8c
     "normalize-css": "normalize.css#~3.0.3"
   }
 }
