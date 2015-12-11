@@ -8,34 +8,43 @@
 	<title>Document</title>
 </head>
 <body>
-	<div class="add-form">
+	<!-- <div class="add-form">
 
 		<h4 class="add-title">Добавление проекта</h4>
+		
 		<form class="add-project">
+		<div class="form-container">
 			<label>
 			<h2 class="project-title">Название проекта</h2>
-			<input type="text" class="project-input error-border" placeholder="Введите название">
-			<div class="error-button">введите название</div></label>
+			<div class="error-button">введите название</div>
+			<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название"></label>
 
 			<label>
 			<h2 class="project-title">Картинка проекта</h2>
-			<div class="input-file-box error-border"></div>
-			<input type="file" class="project-input input-file" placeholder="Загрузите изображение">
-			<div class="error-button">изображение</div>
+			<div class="error-button">изображение </div>
+			<div class="input-file-box" data-info="изображение"></div>
+			<input type="file" class="project-input input-file" placeholder="Загрузите изображение" name="image">
 			</label>
 			
 			<label>
 			<h2 class="project-title">URL проекта</h2>
-			<input type="text" class="project-input error-border" placeholder="Добавьте ссылку">
-			<div class="error-button">ссылка на проект</div></label>
+			<div class="error-button">ссылка на проект</div>
+			<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект">
+			</label>
 
 			<label>
 			<h2 class="project-title">Описание</h2>
-			<textarea class="project-text error-border" placeholder="Пара слов о вашем проекте"></textarea>
-			<div class="error-button">описание</div></label>
+			<div class="error-button">описание</div>
+			<textarea class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание"></textarea>
+			</label>
 
-			<a href="#" class="submit-form">Добавить</a>
+			<input type="submit" class="submit-form">
+
+		</div>
 		</form>
-	</div>
+
+			<script src="jquery/jquery.js"></script>
+			<script src="jquery/form.js"></script>
+	</div> -->
 </body>
 </html>
