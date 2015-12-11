@@ -8,7 +8,8 @@ var app = (function(){
 		$('form').on('submit', checkForm);
 		$('.add-site').on('click', showForm);
 		$('.form-bg').on('click', hideForm);
-		$('.close').on('click', closeForm)
+		$('.close').on('click', closeForm);
+		$('input, textarea, .input-file-box').on('change', clearForm);
 	};
 
 
@@ -25,6 +26,10 @@ var app = (function(){
 	var closeForm = function(){
 		$('.form-bg').hide();
 		$('.add-form').hide();
+	};
+
+	var clearForm = function(){
+		$(this).removeClass('error-border');
 	};
 
 
@@ -45,6 +50,8 @@ var app = (function(){
 			if(content.length === 0){
 				$(this).addClass('error-border');
 				showTooltip(this);
+			} else {
+				$(this).removeClass('error-border');
 			} else {
 				$(this).removeClass('error-border');
 			}
