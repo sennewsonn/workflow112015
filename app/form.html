@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/form.css">
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="add-form">
+
+		<h4 class="add-title">Добавление проекта</h4>
+		<form class="add-project">
+			<label>
+			<h2 class="project-title">Название проекта</h2>
+			<input type="text" class="project-input error-border" placeholder="Введите название">
+			<div class="error-button">введите название</div></label>
+
+			<label>
+			<h2 class="project-title">Картинка проекта</h2>
+			<div class="input-file-box error-border"></div>
+			<input type="file" class="project-input input-file" placeholder="Загрузите изображение">
+			<div class="error-button">изображение</div>
+			</label>
+			
+			<label>
+			<h2 class="project-title">URL проекта</h2>
+			<input type="text" class="project-input error-border" placeholder="Добавьте ссылку">
+			<div class="error-button">ссылка на проект</div></label>
+
+			<label>
+			<h2 class="project-title">Описание</h2>
+			<textarea class="project-text error-border" placeholder="Пара слов о вашем проекте"></textarea>
+			<div class="error-button">описание</div></label>
+
+			<a href="#" class="submit-form">Добавить</a>
+		</form>
+	</div>
+</body>
+</html>
