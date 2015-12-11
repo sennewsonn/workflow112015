@@ -103,12 +103,14 @@
 
 .add-site{
 	height: 133px;
+	text-decoration: none;
 }
 
-.add-site a{
-	text-decoration: none;
-	
+
+.add-site:hover{
+	background: rgba(0, 0, 0, 0.04);
 }
+
 
 
 .add-site-name{

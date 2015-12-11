@@ -6,7 +6,31 @@ var app = (function(){
 
 	var setUpListeners = function(){
 		$('form').on('submit', checkForm);
+		$('.add-site').on('click', showForm);
+		$('.form-bg').on('click', hideForm);
+		$('.close').on('click', closeForm)
 	};
+
+
+	var showForm = function(){
+		$('.form-bg').show();
+		$('.add-form').show();
+	};
+
+	var hideForm = function(){
+		$('.form-bg').hide();
+		$('.add-form').hide();
+	};
+
+	var closeForm = function(){
+		$('.form-bg').hide();
+		$('.add-form').hide();
+	};
+
+
+
+
+
 
 	var checkForm = function(e){
 
