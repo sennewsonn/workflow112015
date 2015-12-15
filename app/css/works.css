@@ -26,13 +26,16 @@
 	width: 165px;
 	height: 122px;
 	position: relative;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	border-radius: 5px;
 }
 
 .port-img img{
-	width: 165px;
-	height: 122px;
-	display: block;
-	margin: 0;
+	
+	min-width: 100%;
+	height: 100%;
 }
 
 .port-link{
@@ -94,26 +97,21 @@
 	text-align: center;
 	font-size: 12px;
 	padding: 12px;
+	border-radius: 0 0 5px 5px;
+
 }
 
 .add-site{
 	height: 133px;
+	text-decoration: none;
 }
 
 
-.port-pick {
-  border-radius: 50%;
-	background: #f7f7f7;
-  box-shadow: 1px 1px 0px 0px #fff,
-  			-1px -1px 0px 0px #d5d5d5;
-  width: 53px;
-  height: 54px;
-  background-image: url(../img/icons.png);
-	margin: 0 auto;
-	margin-top: 26px;
-	margin-bottom: 11px;
-
+.add-site:hover{
+	background: rgba(0, 0, 0, 0.04);
 }
+
+
 
 .add-site-name{
 	display: block;
@@ -122,4 +120,23 @@
 	color: #727070;
 	text-align: center;
 	margin: 0;
+}
+
+
+.add-site-name:before{
+content: " ";
+  display: block;
+  height: 54px;
+  width: 54px;
+  background-image: url(../img/icons.png);
+    background-position: -91px -84px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-color: #f7f7f7;
+  box-shadow: 1px 1px 0px 0px #fff,
+  					-1px -1px 0px 0px #d5d5d5;
+  margin: 0 auto;
+  margin-top: 28px;
+  margin-bottom: 9px;
+
 }

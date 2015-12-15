@@ -3,6 +3,7 @@
     font-family: "OpenSansRegular";
     color: #727070;
     font-size: 14px;
+    padding-bottom: 50px;
 }
 
 .pbx-fd{
@@ -10,35 +11,52 @@
     font-size: 23px;
     letter-spacing: 1px;
 }
-
-.form{
- height: 39px;
- width: 192px;
- padding: 5px;
-  border: 1px solid #d6d5d3;
-  border-radius: 3px;
-  }
+  
 .form-text{
     margin: 0;
     padding: 0;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+    margin-left: 2px;
 }
 
-.feedback-name{
-    display: inline-block;
-    margin-right: 15px;
+.email-text{
+  margin-left: 14px;
 }
 
-.feedback-mail{
-    display: inline-block;
-    margin-bottom: 14px;
+.cap-text{
+  margin-bottom: 7px;
+}
+
+
+.form{
+ height: 41px;
+ width: 192px;
+ padding: 5px;
+  border: 1px solid #d6d5d3;
+  border-radius: 5px;
+  margin-left: 3px;
+  }
+
+
+.fd-name{
+  float: left;
+  display: inline-block;
+}
+
+.fd-mail{
+  float: right;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 13px;
 }
 
 .fd-message{
-    width: 403px;
-    height: 181px;
-    margin-bottom: 14px;
+    width: 403px;   
+    height: 183px;
+    margin-bottom: 9px;
 }
+
+
 
 textarea[placeholder],
 input[placeholder]{
@@ -50,6 +68,90 @@ input[placeholder]{
 
 .feed-box{
     display: block;
-    width: 403px;
+    width: 407px;
     margin: 0 auto;
+}
+
+.captcha-img{
+    width: 189px;
+    height: 77px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    background-color: #fbfcfd;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.captcha-img img{
+    display: block;
+    margin: 6px 9px;
+}
+.fd-captcha{
+  display: inline-block;
+  height: 32px;
+  float: right;
+  margin-bottom: 26px;
+  margin-left: 16px;
+}
+
+.fd-submit{
+  border-radius: 5px;
+  font-family: "OpenSansBold";
+  background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+  color: #1e7465;
+  font-size: 13.5px;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #66dbbe;
+  border-right: 1px solid #40ab91;
+  border-left: 1px solid #40ab91;
+  border-bottom: 1px solid #2fa185;
+  width: 121px;
+  height: 39px;
+  line-height: 35px;
+  display: inline-block;
+  float: left;
+  margin-left: 33px;
+  margin-top: 28px;
+  cursor: pointer;
+}
+
+.fd-submit:hover{
+  background-image: -moz-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(58,160,135) 0%, rgb(95,220,189) 100%);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+  
+}
+
+.fd-reset{
+    border-radius: 5px;
+        display: block;
+  background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+  border-right: 1px solid #b7b7b7;
+  border-left: 1px solid #b7b7b7;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #c5c5c5;
+  font-family: "OpenSansSemiBold";
+  color: #727070;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+width: 121px;
+  height: 39px;
+  display: inline-block;
+  float: right;
+  margin-right: 33px;
+margin-top: 28px;
+cursor: pointer;
+}
+
+.fd-reset:hover{
+  background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+  box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+
+
 }
