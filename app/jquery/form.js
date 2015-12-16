@@ -6,7 +6,6 @@ var app = (function(){
 
 	var setUpListeners = function(){
 		$('form').on('submit', checkForm);
-		$('form').on('submit', showSuccess);
 		$('.add-site').on('click', showForm);
 		$('.form-bg, .close').on('click', hideForm);
 		$('input, textarea, .input-file-box').on('change', clearForm);
@@ -54,30 +53,41 @@ var app = (function(){
 		var form = $(this);
 		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
 
+		var flag = true;
+
 		$.each(items, function(index, val){
 			var content = $(val).val();
 			
 			if(content.length === 0){
 				$(this).addClass('error-border');
 				showTooltip(this);
+				flag = false;
 			} else {
 				$(this).removeClass('error-border');
 				$(this).siblings('.tooltip').remove();
-			// } else if(content.length > 0){
-			// 	$(this).removeClass('error-border');
-			// 	$(this).siblings('.tooltip').remove();
-			// 	hideForm(this);
-			// 	showSuccess(this);
+				
 			};
-
 		});
+
+		if(flag){
+			submitForm(form);
+		}
+
 	};	
+
+	var submitForm = function(form){
+		var url = form.attr('action');
+
+		var data = form.serialize();
+
+		console.log(data);
+		
+	};
 
 
 	var showTooltip = function(target){
 		var showTooltip = "<div class='tooltip'><div class='error-button'>"+$(target).data('info')+"</div></div>";
 		
-
 		if($(target).siblings('.tooltip').length === 0){
 			if($(target).data('direction') === 'right') {
 				$(target).before(showTooltip);
@@ -117,11 +127,6 @@ var app = (function(){
 		}; 		
 
 	};
-
-var showSuccess = function(){
-	//$('.project-success-box').show();
-};
-
 
 	return{
 		init:init

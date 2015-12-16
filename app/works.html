@@ -147,85 +147,92 @@
 	</section>
 
 <div class="form-bg"></div>
-
 <div class="add-form">
+	<h4 class="add-title">Добавление проекта</h4>
+	<form class="form-container" action="post.php" method="post">
 
-		<h4 class="add-title">Добавление проекта</h4>
-		<form class="form-container">
-			<div class="close"></div>
-<div class="input-cont">
-<div class="project-error">
-	<h2 class="error-title">Ошибка!</h2>
-	<div class="error-close"></div>
-	<p class="error-text">Невозможно добавить проект.</p>
-</div>
-			<label>
+	<div class="close"></div>
+	<div class="input-cont">
+
+<!--========================ОКНО ОШИБКИ========================-->
+		<div class="project-error">
+			<h2 class="error-title">Ошибка!</h2>
+			<div class="error-close"></div>
+			<p class="error-text">Невозможно добавить проект.</p>
+		</div>
+<!--===========================================================-->	
+
+<!--====================НАЗВАНИЕ ПРОЕКТА=======================-->	
+		<label>
 			<h2 class="project-title">Название проекта</h2>
-<!-- <div class="tooltip">
+		<!--<div class="tooltip">
 			<div class="error-button">вапвапвап</div>
-		</div> -->
-			<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название" data-direction="left"></label>
+			</div> -->
+			<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название" data-direction="left">
+		</label>
+<!--===========================================================-->
 
-			<label>
+<!--====================КАРТИНКА ПРОЕКТА=======================-->	
+		<label>
 			<h2 class="project-title">Картинка проекта</h2>
-<!-- <div class="tooltip">
+		<!--<div class="tooltip">
 			<div class="error-button">вапвапвап</div>
-		</div> -->
+			</div> -->
 			<div class="input-file-box" data-info="изображение" data-direction="left"></div>
 			<input type="file" class="project-input input-file" placeholder="Загрузите изображение" name="image">
+		</label>
+<!--===========================================================-->
 
-			</label>
-			
-			<label>
+<!--=======================URL ПРОЕКТА=========================-->	
+		<label>
 			<h2 class="project-title">URL проекта</h2>
-		<!-- <div class="tooltip">	
-<div class="error-button">вапвапвап</div>
-		</div> -->
-			
-			<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект" data-direction="left">
-			</label>
-					
-
-			<label>
-			<h2 class="project-title">Описание</h2>
-			<!-- <div class="tooltip">
+		<!--<div class="tooltip">	
 			<div class="error-button">вапвапвап</div>
-		</div> -->
-			<textarea type="text" class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание проекта" data-direction="left"></textarea>		
-			</label>
+			</div> -->
+			<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект" data-direction="left">
+		</label>
+<!--===========================================================-->					
+<!--===================ОПИСАНИЕ [textarea]======================-->	
+		<label>
+			<h2 class="project-title">Описание</h2>
+		<!--<div class="tooltip">
+			<div class="error-button">вапвапвап</div>
+			</div> -->
+			<textarea class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание проекта" data-direction="left"></textarea>	
+		</label>
+<!--===========================================================-->
 
-			<input type="submit" class="submit-form" value="Добавить">
+		<input type="submit" class="submit-form" value="Добавить">
+	</div><!-- input-cont -->
 
-</div>
-<div class="project-success-box">
-	<div class="success-close"></div>
-	<div class="project-success">
-		<h2 class="success-title">Ура!</h2>
-		<p class="success-text">Проект успешно добавлен.</p>
+<!--========================ОКНО УСПЕХА========================-->
+	<div class="project-success-box">
+		<div class="success-close"></div>
+		<div class="project-success">
+			<h2 class="success-title">Ура!</h2>
+			<p class="success-text">Проект успешно добавлен.</p>
+		</div>
 	</div>
-</div>
-		</form>
+<!--===========================================================-->
 
-			<script src="jquery/jquery.js"></script>
-			<script src="jquery/form.js"></script>
+	</form>
+		<script src="jquery/jquery.js"></script>
+		<script src="jquery/form.js"></script>
+</div><!-- add-form -->
+</main>	
 
-	</div>
-
-
-
-
-</main>
-<!-- ==================================================
-==================================================== -->	
 <div class="page-buffer"></div>
-</div>
-	<footer class="footer">
+</div><!-- wrapper -->
+
+<!--===========================ФУТЕР===========================-->
+<footer class="footer">
 	<div class="footer-box">
 		<div class="footer-center">
 			<div class="footer-login-text"><a href="#">вход</a></div>
 			<div class="footer-copy">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
 		</div>	
-		</div>
-	</footer>
+	</div>
+</footer>
+<!--===========================================================-->
 </body>
 </html>
