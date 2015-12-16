@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/feedback.css">
+	<link rel="stylesheet" href="css/form.css">
 	<script src="bower/jquery/jquery.js"></script>
 	<title>Sennewsonn | Frontend-developer</title>
 </head>
@@ -71,40 +72,54 @@
 			<div class="main-page-box">
 		<h2 class="page-box-name pbx-fd">У вас интересный проект? Напишите мне</h2>
 			<article class="page-container page-feedback">
-			<form>
-		<div class="feed-box">
-			<div class="feedback-name">
-				<label><p class="form-text">Имя</p>
-				<input type="text" class="form fd-name" placeholder="Как к вам обращаться"></label>
-			</div>
-			<div class="feedback-mail">
-				<label><p class="form-text">E-mail</p>
-				<input type="text" class="form fd-mail" placeholder="Куда мне писать"></label>
-			</div>
+	<form>
+	<div class="feed-box">
+
+	<label>
+	<p class="form-text">Имя</p>	
+	<input type="text" class="form fd-name error-border" placeholder="Как к вам обращаться" name="user-name" data-info="введите имя" data-direction="left">
+	</label>
 		
-				<label><p class="form-text">Сообщение</p>
-				<textarea class="fd-message form" placeholder="Кратко в чем суть"></textarea></label>
+	<label>
+	<p class="form-text email-text">Email</p>
+	<input type="text" class="form fd-mail error-border" placeholder="Куда мне писать" name="user-email" data-info="введите email" data-direction="right">
+	</label>
 
-<div class="captcha">
-				<label>Введите код, указанный на картинке
-					<div class="captcha-img">
-						<img src="img/code.png"  alt="Капча">
-					</div>
-					<input type="text" class="fd-captcha form" placeholder="Введите код">
-				</label>
-</div>
-				<input type="submit" class="fd-submit" >
+				<div class="clearfix"></div>
 
-				<input type="reset" value="Очистить" class="fd-reset">
-		<div class="clearfix"></div>
-
-</div>
-			</form>
-			</article>
+	<label>
+	<p class="form-text">Сообщение</p>
+	<!-- <div class="tooltip tooltip-left pspsp">
+		<div class="error-button">ваш вопрос</div>
+	</div> -->
+	<textarea class="fd-message form error-border" placeholder="Кратко в чем суть" name="user-message" data-info="ваш вопрос" data-direction="left"></textarea>
+	</label>
+	
+	<p class="form-text cap-text">Введите код, указанный на картинке</p>
+	<div class="captcha-img">
+	<img src="img/code.png"  alt="Капча">
 	</div>
+	<label>
+	<input type="text" class="fd-captcha form error-border" placeholder="Введите код" data-info="код капчи" data-direction="right">
+	</label>
 
-		</section>
-	</main>
+	<input type="submit" class="fd-submit">
+
+	<input type="reset" value="Очистить" class="fd-reset">
+
+	<div class="clearfix"></div>
+
+</div>
+</form>
+
+		<script src="jquery/jquery.js"></script>
+		<script src="jquery/form.js"></script>
+
+		</article>
+</div>
+
+	</section>
+</main>
 <!-- ==================================================
 ==================================================== -->	
 <div class="page-buffer"></div>

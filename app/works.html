@@ -142,7 +142,6 @@
 				</h3></a>
 
 
-
 			</article>
 	</div>
 	</section>
@@ -154,38 +153,64 @@
 		<h4 class="add-title">Добавление проекта</h4>
 		<form class="form-container">
 			<div class="close"></div>
+<div class="input-cont">
+<div class="project-error">
+	<h2 class="error-title">Ошибка!</h2>
+	<div class="error-close"></div>
+	<p class="error-text">Невозможно добавить проект.</p>
+</div>
 			<label>
 			<h2 class="project-title">Название проекта</h2>
-			<!-- <div class="error-button">введите название</div> -->
-			<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название"></label>
+<!-- <div class="tooltip">
+			<div class="error-button">вапвапвап</div>
+		</div> -->
+			<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название" data-direction="left"></label>
 
 			<label>
 			<h2 class="project-title">Картинка проекта</h2>
-			<!-- <div class="error-button">изображение </div> -->
-			<div class="input-file-box" data-info="изображение"></div>
+<!-- <div class="tooltip">
+			<div class="error-button">вапвапвап</div>
+		</div> -->
+			<div class="input-file-box" data-info="изображение" data-direction="left"></div>
 			<input type="file" class="project-input input-file" placeholder="Загрузите изображение" name="image">
+
 			</label>
 			
 			<label>
-			<h2 class="project-title">URL проекта</h2><!-- 
-			<div class="error-button">ссылка на проект</div> -->
-			<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект">
+			<h2 class="project-title">URL проекта</h2>
+		<!-- <div class="tooltip">	
+<div class="error-button">вапвапвап</div>
+		</div> -->
+			
+			<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект" data-direction="left">
 			</label>
+					
 
 			<label>
-			<h2 class="project-title buff">Описание</h2><!-- 
-			<div class="error-button">описание проекта</div> -->
-			<textarea class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание проекта"></textarea>
-
+			<h2 class="project-title">Описание</h2>
+			<!-- <div class="tooltip">
+			<div class="error-button">вапвапвап</div>
+		</div> -->
+			<textarea type="text" class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание проекта" data-direction="left"></textarea>		
 			</label>
 
 			<input type="submit" class="submit-form" value="Добавить">
 
+</div>
+<div class="project-success-box">
+	<div class="success-close"></div>
+	<div class="project-success">
+		<h2 class="success-title">Ура!</h2>
+		<p class="success-text">Проект успешно добавлен.</p>
+	</div>
+</div>
 		</form>
 
 			<script src="jquery/jquery.js"></script>
 			<script src="jquery/form.js"></script>
+
 	</div>
+
 
 
 
