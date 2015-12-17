@@ -57,7 +57,7 @@ var app = (function(){
 
 		$.each(items, function(index, val){
 			var content = $(val).val();
-			
+
 			if(content.length === 0){
 				$(this).addClass('error-border');
 				showTooltip(this);
@@ -66,7 +66,7 @@ var app = (function(){
 				$(this).removeClass('error-border');
 				$(this).siblings('.tooltip').remove();
 				
-			};
+			}
 		});
 
 		if(flag){
@@ -80,8 +80,20 @@ var app = (function(){
 
 		var data = form.serialize();
 
-		console.log(data);
+		$.ajax({
+			url: url,
+			type: 'POST',
+			dataType: 'json',
+			data: data
+		}).done( 
+			function(data){
+				console.log('Все гуд');
+			}
+		).fail( function(){
+			console.log('Ошибка');
+		});
 		
+		console.log(data);
 	};
 
 
@@ -96,36 +108,23 @@ var app = (function(){
 				var visotaTOLTIP = $(target).siblings('.tooltip').height();
 				var raznost = (visotaLABEL - vistotaINPUT);
 				var	polINPUT = (vistotaINPUT / 2);
-				//var	polTOLTIP = (visotaTOLTIP / 2);
 				var otstup = (polINPUT + raznost - visotaTOLTIP);
 				$(target).siblings('.tooltip').css('top', polINPUT);
-				// var itemHeight = $(target).height();
-				// 	itemHeight = (itemHeight / 2);
-				// $(target).siblings('.tooltip').css('top', itemHeight);
 
 
 			} else if($(target).data('direction') === 'left') {
 				$(target).before(showTooltip);
 				$(target).siblings('.tooltip').addClass('tooltip-left');
-
 				var visotaLABEL = $(target).parent('label').height();
 				var vistotaINPUT = $(target).height();
 				var visotaTOLTIP = $(target).siblings('.tooltip').height();
 				var raznost = (visotaLABEL - vistotaINPUT);
 				var	polINPUT = (vistotaINPUT / 2);
 				var	polTOLTIP = (visotaTOLTIP / 2);
-				var otstup = (polINPUT + raznost - polTOLTIP);
-				// var inputHeight = $(target).height();
-				// var labelHeight = $(target).parent('label').height();
-				// var raznost = (labelHeight - inputHeight);
-				// 	//raznost = (raznost / 2);
-				// 	//inputHeight = (inputHeight / 2);
-				// 	inputHeight = (inputHeight - raznost);
-
+				var otstup = (polINPUT + raznost - polTOLTIP)
 				$(target).siblings('.tooltip').css('top', otstup);
 			};
 		}; 		
-
 	};
 
 	return{

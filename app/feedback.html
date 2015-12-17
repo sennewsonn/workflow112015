@@ -14,10 +14,10 @@
 </head>
 <body>
 <div class="wrapper">
-	<header class="header">
-		<div class="header-box">
-			<a href="http://loftschool.com/"><img src="img/logo.png" height="71" width="95" alt="LoftSchool - от мыслителя к создателю" class="header-box-logo"></a>
-			<ul class="header-box-social">
+<header class="header">
+	<div class="header-box">
+		<a href="http://loftschool.com/"><img src="img/logo.png" height="71" width="95" alt="LoftSchool - от мыслителя к создателю" class="header-box-logo"></a>
+		<ul class="header-box-social">
 			<li class="social social-fb">
 				<a href="https://ru-ru.facebook.com/" target="_blank">Фейсбук</a>
 			</li>
@@ -29,105 +29,112 @@
 			</li>
 			<li class="social social-gh">
 				<a href="https://github.com/sennewsonn" target="_blank">Гитхаб</a>
-			</li>
+			</li>		
+		</ul>
+	</div><!-- header-box -->
+</header> 
 
-				
-			</ul>
-		</div>
-	</header> 
-<!-- ==================================================
-==================================================== -->
-	<main class="main clearfix">
+<main class="main clearfix">
+<section class="main-bar"> 
 
-		<section class="main-bar"> 
-			<nav class="main-bar-nav">
-				<ul>
-					<li class="nav-button butt-about"><a href="index.html">Обо мне</a></li>
-					<li class="nav-button butt-works"><a href="works.html">Мои Работы</a></li>
-					<li class="nav-button butt-fback butt-active"><a href="feedback.html">Обратная связь</a></li>
-				</ul>
-			</nav>
-			<aside class="main-bar-contacts">
-				<ul>
-					<li class="list-contacts">Контакты</li>
-					<li class="contacts-link link-email">
-							<div class="link-img img-email"></div>
-							<a href="mailto:n@istranet.ru">n@istranet.ru</a>
-					</li>
-					<li class="contacts-link link-phone">
-							<div class="link-img img-phone"></div>
-							<a href="tel:89296404046">+79296404046 </a>
-					</li>
-					<li class="contacts-link link-skype">
-							<div class="link-img img-skype"></div>
-							<a href="skype:meritseger0?chat">meritseger0 </a>
-					</li>
-				</ul>
-			</aside>
-		</section>
-<!-- ==================================================
-==================================================== -->
-		<section class="main-page">
-			<div class="main-page-box">
-		<h2 class="page-box-name pbx-fd">У вас интересный проект? Напишите мне</h2>
-			<article class="page-container page-feedback">
-	<form>
+<!--===================БОКОВОЕ МЕНЮ==================-->
+	<nav class="main-bar-nav">
+		<ul>
+			<li class="nav-button butt-about"><a href="index.html">Обо мне</a></li>
+			<li class="nav-button butt-works"><a href="works.html">Мои Работы</a></li>
+			<li class="nav-button butt-fback butt-active"><a href="feedback.html">Обратная связь</a></li>
+		</ul>
+	</nav>
+<!--=================================================-->	
+
+<!--=====================КОНТАКТЫ====================-->
+	<aside class="main-bar-contacts">
+	<ul>
+		<li class="list-contacts">Контакты</li>
+		<li class="contacts-link link-email">
+			<div class="link-img img-email"></div>
+			<a href="mailto:n@istranet.ru">n@istranet.ru</a>
+		</li>
+		<li class="contacts-link link-phone">
+			<div class="link-img img-phone"></div>
+			<a href="tel:89296404046">+79296404046 </a>
+		</li>
+		<li class="contacts-link link-skype">
+			<div class="link-img img-skype"></div>
+			<a href="skype:meritseger0?chat">meritseger0</a>
+		</li>
+	</ul>
+	</aside>
+<!--=================================================-->	
+</section><!-- main-bar -->
+
+
+<section class="main-page">
+<div class="main-page-box">
+<h2 class="page-box-name pbx-fd">У вас интересный проект? Напишите мне</h2>
+<article class="page-container page-feedback">
+	<form action="post.php" method="post">
 	<div class="feed-box">
 
-	<label>
-	<p class="form-text">Имя</p>	
-	<input type="text" class="form fd-name error-border" placeholder="Как к вам обращаться" name="user-name" data-info="введите имя" data-direction="left">
-	</label>
-		
-	<label>
-	<p class="form-text email-text">Email</p>
-	<input type="text" class="form fd-mail error-border" placeholder="Куда мне писать" name="user-email" data-info="введите email" data-direction="right">
-	</label>
+<!--===================ВВЕДИТЕ ИМЯ===================-->
+		<label>
+			<p class="form-text">Имя</p>	
+			<input type="text" class="form fd-name" placeholder="Как к вам обращаться" name="user-name" data-info="введите имя" data-direction="left">
+		</label>
+<!--=================================================-->	
+
+<!--==================ВВЕДИТЕ EMAIL==================-->
+		<label>
+			<p class="form-text email-text">Email</p>
+			<input type="text" class="form fd-mail" placeholder="Куда мне писать" name="user-email" data-info="введите email" data-direction="right">
+		</label>
+<!--=================================================-->	
 
 				<div class="clearfix"></div>
 
-	<label>
-	<p class="form-text">Сообщение</p>
-	<!-- <div class="tooltip tooltip-left pspsp">
-		<div class="error-button">ваш вопрос</div>
-	</div> -->
-	<textarea class="fd-message form error-border" placeholder="Кратко в чем суть" name="user-message" data-info="ваш вопрос" data-direction="left"></textarea>
-	</label>
-	
-	<p class="form-text cap-text">Введите код, указанный на картинке</p>
-	<div class="captcha-img">
-	<img src="img/code.png"  alt="Капча">
-	</div>
-	<label>
-	<input type="text" class="fd-captcha form error-border" placeholder="Введите код" data-info="код капчи" data-direction="right">
-	</label>
+<!--====================СООБЩЕНИЕ====================-->
+		<label>
+			<p class="form-text">Сообщение</p>
+	 <!-- <div class="tooltip tooltip-left pspsp">
+			<div class="error-button">ваш вопрос</div>
+			</div> -->
+			<textarea class="fd-message form" placeholder="Кратко в чем суть" name="user-message" data-info="ваш вопрос" data-direction="left"></textarea>
+		</label>
+<!--=================================================-->	
 
-	<input type="submit" class="fd-submit">
+<!--======================КАПЧА======================-->	
+		<p class="form-text cap-text">Введите код, указанный на картинке</p>
+		<div class="captcha-img">
+			<img src="img/code.png"  alt="Капча">
+		</div>
+		<label>
+			<input type="text" class="fd-captcha form" placeholder="Введите код" data-info="код капчи" data-direction="right">
+		</label>
+<!--=================================================-->	
 
-	<input type="reset" value="Очистить" class="fd-reset">
-
-	<div class="clearfix"></div>
-
-</div>
-</form>
+		<input type="submit" class="fd-submit">
+		<input type="reset" value="Очистить" class="fd-reset">
+		<div class="clearfix"></div>
+	</div><!-- feed-box -->
+	</form>
 
 		<script src="jquery/jquery.js"></script>
-		<script src="jquery/form.js"></script>
-
-		</article>
-</div>
-
-	</section>
+		<script src="jquery/form.js"></script>	
+</article><!-- page-container page-feedback -->
+</div><!-- main-page-box -->
+</section><!-- main-page -->
 </main>
-<!-- ==================================================
-==================================================== -->	
+
 <div class="page-buffer"></div>
-</div>
-	<footer class="footer">
-		<div class="footer-center">
-			<div class="footer-login-text"><a href="#">вход</a></div>
-			<div class="footer-copy">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
-		</div>	
-	</footer>
+</div><!-- wrapper -->
+
+<!--======================ФУТЕР======================-->
+<footer class="footer">
+	<div class="footer-center">
+		<div class="footer-login-text"><a href="#">вход</a></div>
+		<div class="footer-copy">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
+	</div>	
+</footer>
+<!--=================================================-->	
 </body>
 </html>
