@@ -8,10 +8,11 @@ var app = (function(){
 		$('form').on('submit', checkForm);
 		$('.add-site').on('click', showForm);
 		$('.form-bg, .close').on('click', hideForm);
-		$('input, textarea, .input-file-box').on('change', clearForm);
-		$('.fd-reset').on('click', resetForm);
 		$('.error-close').on('click', hideError);
 		$('.success-close').on('click', hideSuccess);
+		$('input, textarea, .input-file-box').on('change', clearForm);
+		$('.fd-reset').on('click', resetForm);
+		$('input, textarea, .input-file-box').on('focusout', controlForm);
 		
 	};
 
@@ -46,6 +47,8 @@ var app = (function(){
 
 
 
+
+
 	var checkForm = function(e){
 
 		e.preventDefault();
@@ -53,7 +56,7 @@ var app = (function(){
 		var form = $(this);
 		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
 
-		var flag = true;
+		//var flag = true;
 
 		$.each(items, function(index, val){
 			var content = $(val).val();
@@ -61,19 +64,21 @@ var app = (function(){
 			if(content.length === 0){
 				$(this).addClass('error-border');
 				showTooltip(this);
-				flag = false;
+				//flag = false;
 			} else {
 				$(this).removeClass('error-border');
-				$(this).siblings('.tooltip').remove();
-				
-			}
+				$(this).siblings('.tooltip').remove();	
+			};
 		});
 
-		if(flag){
-			submitForm(form);
-		}
+		// if(flag){
+		// 	submitForm(form);
+		// }
 
 	};	
+
+
+	
 
 	var submitForm = function(form){
 		var url = form.attr('action');
@@ -125,6 +130,12 @@ var app = (function(){
 				$(target).siblings('.tooltip').css('top', otstup);
 			};
 		}; 		
+	};
+
+
+	var controlForm = function(focusLost){
+		
+		console.log(this);
 	};
 
 	return{
