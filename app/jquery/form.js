@@ -12,10 +12,8 @@ var app = (function(){
 		$('.success-close').on('click', hideSuccess);
 		$('input, textarea, .input-file-box').on('change', clearForm);
 		$('.fd-reset').on('click', resetForm);
-		$('input, textarea, .input-file-box').on('focusout', controlForm);
-		
+		$('form').on('focusout', controlForm);
 	};
-
 
 	var showForm = function(){
 		$('.form-bg').show();
@@ -45,18 +43,12 @@ var app = (function(){
 		$('.form').removeClass('error-border');
 	};
 
-
-
-
-
 	var checkForm = function(e){
-
 		e.preventDefault();
 
 		var form = $(this);
 		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
-
-		//var flag = true;
+		var flag = true;
 
 		$.each(items, function(index, val){
 			var content = $(val).val();
@@ -71,18 +63,35 @@ var app = (function(){
 			};
 		});
 
-		// if(flag){
-		// 	submitForm(form);
-		// }
-
+		if(flag){
+			submitForm(form);
+		};
 	};	
+
+	var controlForm = function(e){
+		e.preventDefault();
+
+		var form = $(this);
+		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
+
+		$.each(items, function(index, val){
+			var content = $(val).val();
+
+			if(content.length === 0){
+				$(this).addClass('error-border');
+				showTooltip(this);
+			} else {
+				$(this).removeClass('error-border');
+				$(this).siblings('.tooltip').remove();	
+			};
+		});
+	};
 
 
 	
 
 	var submitForm = function(form){
 		var url = form.attr('action');
-
 		var data = form.serialize();
 
 		$.ajax({
@@ -130,12 +139,6 @@ var app = (function(){
 				$(target).siblings('.tooltip').css('top', otstup);
 			};
 		}; 		
-	};
-
-
-	var controlForm = function(focusLost){
-		
-		console.log(this);
 	};
 
 	return{
