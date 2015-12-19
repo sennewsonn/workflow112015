@@ -13,216 +13,203 @@
 </head>
 <body>
 <div class="wrapper">
-<header class="header">
-	<div class="header-box">
+	<header class="header">
+		<div class="header-box">
+		<!-- =============== Логотип =============== -->
+			<a href="/" class="header-box-logo">
+				<img src="img/logo.png" height="71" width="95" alt="Sennewsonn - веб-разработка, верстка, JavaScript">
+			</a>
+		<!-- ================= fin ================= -->
 
-<!--=================ЛОГОТИП================-->
-		<a href="http://loftschool.com/"><img src="img/logo.png" height="71" width="95" alt="LoftSchool - от мыслителя к создателю" class="header-box-logo"></a>
-<!--========================================-->		
+		<!-- ============== СОЦ ИКОНКИ ============= -->
+			<ul class="header-box-social">
+				<li class="social social-fb">
+					<a href="//ru-ru.facebook.com/" target="_blank">Фейсбук</a> 
+				</li>
+				<li class="social social-vk">
+					<a href="//vk.com/nicks666" target="_blank">Вконтакте</a>
+				</li>
+				<li class="social social-tw">
+					<a href="//twitter.com/AveLegenda" target="_blank">Твиттер</a>
+				</li>
+				<li class="social social-gh">
+					<a href="//github.com/sennewsonn" target="_blank">Гитхаб</a>
+				</li>
+			</ul><div class="clearfix"></div>
+		<!-- ================= fin ================= -->
+		</div><!-- header-box -->
+	</header> 
 
-<!--=============КНОПКИ СОЦСЕТЕЙ============-->
-		<ul class="header-box-social">
-			<li class="social social-fb">
-				<a href="https://ru-ru.facebook.com/" target="_blank">Фейсбук</a>
-			</li>
-			<li class="social social-vk">
-				<a href="https://vk.com/nicks666" target="_blank">Вконтакте</a>
-			</li>
-			<li class="social social-tw">
-				<a href="https://twitter.com/AveLegenda" target="_blank">Твиттер</a>
-			</li>
-			<li class="social social-gh">
-				<a href="https://github.com/sennewsonn" target="_blank">Гитхаб</a>
-			</li>		
-		</ul>
-<!--========================================-->
+	<main class="main clearfix">
+		<section class="main-bar">
+		<!-- ============== НАВИГАЦИЯ ============== -->
+			<nav class="main-bar-nav">
+				<ul>
+					<li class="nav-button butt-about">
+						<a href="index.html">Обо мне</a>
+					</li>
+					<li class="nav-button butt-works butt-active">
+						<a href="works.html">Мои Работы</a>
+					</li>
+					<li class="nav-button butt-fback">
+						<a href="feedback.html">Обратная связь</a>
+					</li>
+				</ul>
+			</nav>
+		<!-- ================= fin ================= -->
 
-	</div><!-- header-box -->
-</header> 
+		<!-- =============== КОНТАКТЫ ============== -->
+			<aside class="main-bar-contacts">
+					<ul>
+						<li class="list-contacts">Контакты</li>
+						<li class="contacts-link link-email">
+								<div class="link-img img-email"></div>
+								<a href="mailto:n@istranet.ru">n@istranet.ru</a>
+						</li>
+						<li class="contacts-link link-phone">
+								<div class="link-img img-phone"></div>
+								<a href="tel:89296404046">+79296404046 </a>
+						</li>
+						<li class="contacts-link link-skype">
+								<div class="link-img img-skype"></div>
+								<a href="skype:meritseger0?chat">meritseger0 </a>
+						</li>
+					</ul>
+			</aside>
+		<!-- ================= fin ================= -->
+		</section><!-- main-bar -->
 
-<main class="main clearfix">
-<section class="main-bar"> 
+		<section class="main-page">
+		<!-- ============= МОИ РАБОТЫ ============== -->
+			<div class="main-page-box">
+				<h2 class="page-box-name">Мои работы</h2>
+				<article class="page-container page-portfolio">
 
-<!--==============БОКОВОЕ МЕНЮ==============-->
-	<nav class="main-bar-nav">
-		<ul>
-			<li class="nav-button butt-about"><a href="index.html">Обо мне</a></li>
-			<li class="nav-button butt-works butt-active"><a href="works.html">Мои Работы</a></li>
-			<li class="nav-button butt-fback"><a href="feedback.html">Обратная связь</a></li>
-		</ul>
-	</nav>
-<!--========================================-->
+				<!-- ============ ПРОЕКТ #1 ============ -->	
+					<div class="portfolio">
+						<div class="port-img">
+							<img src="img/site1.jpg" alt="Пикабу">
+							<a href="http://pikabu.ru/" class="port-link" target="_blank">
+								<p>Посмотреть</p>
+							</a>
+						</div>
+						<h3 class="portfolio-name">pikabu.ru</h3>
+						<p class="portfolio-text">Рассказы, интересные ссылки, выбранные пользователями.</p>
+					</div>
+				<!-- =============== fin =============== -->	
 
-<!--================КОНТАКТЫ================-->
-	<aside class="main-bar-contacts">
-	<ul>
-		<li class="list-contacts">Контакты</li>
-		<li class="contacts-link link-email">
-			<div class="link-img img-email"></div>
-			<a href="mailto:n@istranet.ru">n@istranet.ru</a>
-		</li>
-		<li class="contacts-link link-phone">
-			<div class="link-img img-phone"></div>
-			<a href="tel:89296404046">+79296404046 </a>
-		</li>
-		<li class="contacts-link link-skype">
-			<div class="link-img img-skype"></div>
-			<a href="skype:meritseger0?chat">meritseger0</a>
-		</li>
-	</ul>
-	</aside>
-<!--========================================-->
-</section><!-- main-bar -->
+				<!-- ============ ПРОЕКТ #2 ============ -->
+					<div class="portfolio">
+						<div class="port-img">
+							<img src="img/site2.jpg" alt="Истранет">
+							<a href="http://istranet.ru/" target="_blank" class="port-link">
+								<p>Посмотреть</p>
+							</a>
+						</div>
+						<h3 class="portfolio-name">istranet.ru</h3>
+						<p class="portfolio-text">Интернет в Истре и Истринском районе.</p>
+					</div>
+				<!-- =============== fin =============== -->	
 
+				<!-- ============ ПРОЕКТ #3 ============ -->
+					<div class="portfolio">
+						<div class="port-img">
+							<img src="img/site3.jpg" alt="Хабрахабр">
+							<a href="http://habrahabr.ru/" class="port-link" target="_blank">
+								<p>Посмотреть</p>
+							</a>
+						</div>
+						<h3 class="portfolio-name">habrahabr.ru</h3>
+						<p class="portfolio-text">Публикации в коллективном и персональном блогах.</p>
+					</div>
+				<!-- =============== fin =============== -->	
 
-<section class="main-page">
-<div class="main-page-box">
-	<h2 class="page-box-name">Мои работы</h2>
-	<article class="page-container page-portfolio">
-					
-<!--==============ПОРТФОЛИО #1==============-->
-		<div class="portfolio">
-			<div class="port-img">
-				<img src="img/site1.jpg" alt="Пикабу">
-				<a href="http://pikabu.ru/" class="port-link" target="_blank"><p>Посмотреть</p></a>
-			</div>
-			<h3 class="portfolio-name">
-					picabu.ru 
-			</h3>
-			<p class="portfolio-text">
-				Рассказы, интересные ссылки, выбранные пользователями.
-			</p>
-		</div>
-<!--========================================-->
+				<!-- ============ ПРОЕКТ #4 ============ -->
+					<div class="portfolio">
+						<div class="port-img">
+							<img src="img/site4.jpg" alt="Яндекс">
+							<a href="https://www.yandex.ru/" class="port-link" target="_blank">
+								<p>Посмотреть</p>
+							</a>
+						</div>
+						<h3 class="portfolio-name">yandex.ru</h3>
+						<p class="portfolio-text">Поиск по всему интернету.</p>
+					</div>
+				<!-- =============== fin =============== -->	
 
-<!--==============ПОРТФОЛИО #2==============-->
-		<div class="portfolio">
-			<div class="port-img">
-				<img src="img/site2.jpg" alt="Истранет">
-				<a href="http://istranet.ru/" target="_blank" class="port-link"><p>Посмотреть</p></a>
-			</div>
-			<h3 class="portfolio-name">
-				istranet.ru
-			</h3>
-			<p class="portfolio-text">
-				Интернет в Истре и Истринском районе
-			</p>
-		</div>
-<!--========================================-->
-
-<!--==============ПОРТФОЛИО #2==============-->
-		<div class="portfolio">
-			<div class="port-img">
-				<img src="img/site3.jpg" alt="Хабрахабр">
-				<a href="http://habrahabr.ru/" class="port-link" target="_blank"><p>Посмотреть</p></a>
-			</div>
-			<h3 class="portfolio-name">
-				habrahabr.ru 
-			</h3>
-			<p class="portfolio-text">
-				Публикации в коллективном и персональном блогах.
-			</p>
-		</div>
-<!--========================================-->
-
-
-			<div class="portfolio">
-				<div class="port-img">
-					<img src="img/site4.jpg" alt="Яндекс">
-					<a href="https://www.yandex.ru/" class="port-link" target="_blank"><p>Посмотреть</p></a>
-				</div>
-				<h3 class="portfolio-name">
-					yandex.ru 
-				</h3>
-				<p class="portfolio-text">
-					Поиск по всему интернету.
-				</p>
-			</div>
-<!--========================================-->
-
-			<div class="portfolio">
-				<div class="port-img">
-					<img src="img/site5.jpg" alt="Рамблер">
-					<a href="http://www.rambler.ru/" class="port-link" target="_blank"><p>Посмотреть</p></a>
-				</div>
-				<h3 class="portfolio-name">
-					rambler.ru 
-				</h3>
-				<p class="portfolio-text">
-					Поисковик, о которым вы конечно же ни разу не слышали. А я хороший, между прочим!
- 				</p>
-			</div>
-
+				<!-- ============ ПРОЕКТ #5 ============ -->
+					<div class="portfolio">
+						<div class="port-img">
+							<img src="img/site5.jpg" alt="Рамблер">
+							<a href="http://www.rambler.ru/" class="port-link" target="_blank">
+								<p>Посмотреть</p>
+							</a>
+						</div>
+						<h3 class="portfolio-name">rambler.ru</h3>
+						<p class="portfolio-text">Поисковик, о которым вы конечно же ни разу не слышали. А я хороший, между прочим!</p>
+					</div>
+				<!-- =============== fin =============== -->	
 			
-			<a href="#" class="portfolio add-site">
-				<h3 class="add-site-name">
-					Добавить проект
-				</h3></a>
-	</article><!-- page-container page-portfolio -->
-</div><!-- main-page-box -->
-</section><!-- main-page -->
+				<!-- ===== ФОРМА ДОБАВЛЕНИЯ ПРОЕКТА ==== -->
+					<a href="#" class="portfolio add-site">
+						<h3 class="add-site-name">Добавить проект</h3>
+					</a>
+				<!-- =============== fin =============== -->
+				</article>
+			</div>
+		<!-- ================= fin ================= -->
+		</section><!-- main-page -->
 
-<div class="form-bg"></div>
-<div class="add-form">
-	<h4 class="add-title">Добавление проекта</h4>
-	<form class="form-container" action="post.php" method="post">
+	<div class="form-bg"><!-- Темный фон если вызвана форма --></div>
+	<div class="add-form">
+		<form class="form-container" action="post.php" method="post">
+			<h4 class="add-title">Добавление проекта</h4>
+			<div class="close"></div>
+			<div class="input-cont">
 
-	<div class="close"></div>
-	<div class="input-cont">
+			<!-- ============ ПОПАП ОШИБКИ =========== -->
+				<div class="project-error">
+					<h2 class="error-title">Ошибка!</h2>
+					<div class="error-close"></div>
+					<p class="error-text">Невозможно добавить проект.</p>
+				</div>
+			<!-- ================ fin ================ -->
 
-<!--========================ОКНО ОШИБКИ========================-->
-		<div class="project-error">
-			<h2 class="error-title">Ошибка!</h2>
-			<div class="error-close"></div>
-			<p class="error-text">Невозможно добавить проект.</p>
-		</div>
-<!--===========================================================-->	
+			<!-- ========== НАЗВАНИЕ ПРОЕКТА ========= -->	
+				<label>
+					<h2 class="project-title">Название проекта</h2>
+					<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название" data-direction="left">
+				</label>
+			<!-- ================ fin ================ -->
 
-<!--====================НАЗВАНИЕ ПРОЕКТА=======================-->	
-		<label>
-			<h2 class="project-title">Название проекта</h2>
-		<!--<div class="tooltip">
-			<div class="error-button">вапвапвап</div>
-			</div> -->
-			<input type="text" class="project-input" placeholder="Введите название" name="name" data-info="введите название" data-direction="left">
-		</label>
-<!--===========================================================-->
+			<!-- ========== КАРТИНКА ПРОЕКТА ========= -->
+				<label>
+					<h2 class="project-title">Картинка проекта</h2>
+					<div class="input-file-box" data-info="изображение" data-direction="left"></div>
+					<input type="file" class="project-input input-file" placeholder="Загрузите изображение" name="image">
+				</label>
+			<!-- ================ fin ================ -->
 
-<!--====================КАРТИНКА ПРОЕКТА=======================-->	
-		<label>
-			<h2 class="project-title">Картинка проекта</h2>
-		<!--<div class="tooltip">
-			<div class="error-button">вапвапвап</div>
-			</div> -->
-			<div class="input-file-box" data-info="изображение" data-direction="left"></div>
-			<input type="file" class="project-input input-file" placeholder="Загрузите изображение" name="image">
-		</label>
-<!--===========================================================-->
+			<!-- ============ URL ПРОЕКТА ============ -->
+				<label>
+					<h2 class="project-title title-url">URL проекта</h2>
+					<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект" data-direction="left">
+				</label>
+			<!-- ================ fin ================ -->	
 
-<!--=======================URL ПРОЕКТА=========================-->	
-		<label>
-			<h2 class="project-title">URL проекта</h2>
-		<!--<div class="tooltip">	
-			<div class="error-button">вапвапвап</div>
-			</div> -->
-			<input type="text" class="project-input" placeholder="Добавьте ссылку" name="url" data-info="ссылка на проект" data-direction="left">
-		</label>
-<!--===========================================================-->	
+			<!-- ============== ОПИСАНИЕ ============= -->
+				<label class="label-about">
+					<h2 class="project-title">Описание</h2>
+					<textarea class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание проекта" data-direction="left"></textarea>	
+				</label>
+			<!-- ================ fin ================ -->
 
-<!--===================ОПИСАНИЕ [textarea]=====================-->	
-		<label>
-			<h2 class="project-title">Описание</h2>
-		<!--<div class="tooltip">
-			<div class="error-button">вапвапвап</div>
-			</div> -->
-			<textarea class="project-text" placeholder="Пара слов о вашем проекте" name="information" data-info="описание проекта" data-direction="left"></textarea>	
-		</label>
-<!--===========================================================-->
+				<button type="submit" class="submit-form">Добавить</button>
+			</div><!-- input-cont -->
+		</form>
+	</div><!-- add-form -->
 
-		<input type="submit" class="submit-form" value="Добавить">
-	</div><!-- input-cont -->
-
-<!--========================ОКНО УСПЕХА========================-->
+<!-- =============== ПОПАП УСПЕХА ============== -->
 	<div class="project-success-box">
 		<div class="success-close"></div>
 		<div class="project-success">
@@ -230,24 +217,21 @@
 			<p class="success-text">Проект успешно добавлен.</p>
 		</div>
 	</div>
-<!--===========================================================-->
+<!-- =================== fin =================== -->
 
-	</form>
-		<script src="jquery/jquery.js"></script>
-		<script src="jquery/form.js"></script>
-</div><!-- add-form -->
-</main>	
-
-<div class="page-buffer"></div>
+	</main>	
+	<script src="jquery/jquery.js"></script>
+	<script src="jquery/form.js"></script>
+	<div class="page-buffer"></div>
 </div><!-- wrapper -->
 
-<!--===========================ФУТЕР===========================-->
 <footer class="footer">
-	<div class="footer-center">
-		<div class="footer-login-text"><a href="#">вход</a></div>
-		<div class="footer-copy">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
-	</div>	
+		<div class="footer-center">
+			<div class="footer-login-text">
+				<a href="#">вход</a>
+			</div>
+			<div class="footer-copy">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
+		</div>	
 </footer>
-<!--===========================================================-->
 </body>
 </html>

@@ -9,7 +9,8 @@ var app = (function(){
 		$('.add-site').on('click', showForm);
 		$('.form-bg, .close').on('click', hideForm);
 		$('.error-close').on('click', hideError);
-		$('.success-close').on('click', hideSuccess);
+		$('.add-title').on('click', showSuccess);
+		$('.form-bg, .success-close').on('click', hideSuccess);
 		$('input, textarea, .input-file-box').on('change', clearForm);
 		$('.fd-reset').on('click', resetForm);
 		$('form').on('focusout', controlForm);
@@ -30,6 +31,7 @@ var app = (function(){
 	};
 
 	var hideSuccess = function(){
+		$('.form-bg').hide();
 		$('.project-success-box').hide();
 	};
 
@@ -43,12 +45,19 @@ var app = (function(){
 		$('.form').removeClass('error-border');
 	};
 
+	var showSuccess = function(){
+		$('.add-form').hide();
+		$('.project-success-box').show();
+	};
+
 	var checkForm = function(e){
 		e.preventDefault();
 
 		var form = $(this);
 		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
 		var flag = true;
+		
+		
 
 		$.each(items, function(index, val){
 			var content = $(val).val();
@@ -56,10 +65,11 @@ var app = (function(){
 			if(content.length === 0){
 				$(this).addClass('error-border');
 				showTooltip(this);
-				//flag = false;
+				$('.project-error').show();
+				flag = false;
 			} else {
 				$(this).removeClass('error-border');
-				$(this).siblings('.tooltip').remove();	
+				$(this).siblings('.tooltip').remove();
 			};
 		});
 
@@ -117,26 +127,26 @@ var app = (function(){
 		if($(target).siblings('.tooltip').length === 0){
 			if($(target).data('direction') === 'right') {
 				$(target).before(showTooltip);
-				var visotaLABEL = $(target).parent('label').height();
-				var vistotaINPUT = $(target).height();
-				var visotaTOLTIP = $(target).siblings('.tooltip').height();
-				var raznost = (visotaLABEL - vistotaINPUT);
-				var	polINPUT = (vistotaINPUT / 2);
-				var otstup = (polINPUT + raznost - visotaTOLTIP);
-				$(target).siblings('.tooltip').css('top', polINPUT);
+				// var visotaLABEL = $(target).parent('label').height();
+				// var vistotaINPUT = $(target).height();
+				// var visotaTOLTIP = $(target).siblings('.tooltip').height();
+				// var raznost = (visotaLABEL - vistotaINPUT);
+				// var	polINPUT = (vistotaINPUT / 2);
+				// var otstup = (polINPUT + raznost - visotaTOLTIP);
+				// $(target).siblings('.tooltip').css('top', otstup);
 
 
 			} else if($(target).data('direction') === 'left') {
 				$(target).before(showTooltip);
 				$(target).siblings('.tooltip').addClass('tooltip-left');
-				var visotaLABEL = $(target).parent('label').height();
-				var vistotaINPUT = $(target).height();
-				var visotaTOLTIP = $(target).siblings('.tooltip').height();
-				var raznost = (visotaLABEL - vistotaINPUT);
-				var	polINPUT = (vistotaINPUT / 2);
-				var	polTOLTIP = (visotaTOLTIP / 2);
-				var otstup = (polINPUT + raznost - polTOLTIP)
-				$(target).siblings('.tooltip').css('top', otstup);
+				// var visotaLABEL = $(target).parent('label').height();
+				// var vistotaINPUT = $(target).height();
+				// var visotaTOLTIP = $(target).siblings('.tooltip').height();
+				// var raznost = (visotaLABEL - vistotaINPUT);
+				// var	polINPUT = (vistotaINPUT / 2);
+				// var	polTOLTIP = (visotaTOLTIP / 2);
+				// var otstup = (polINPUT + raznost - polTOLTIP)
+				// $(target).siblings('.tooltip').css('top', otstup);
 			};
 		}; 		
 	};
