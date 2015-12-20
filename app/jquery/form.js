@@ -18,7 +18,7 @@ var app = (function(){
 
 	var showForm = function(){
 		$('.form-bg').show();
-		$('.add-form').show();
+		$('.add-form').show(200);
 	};
 
 	var hideForm = function(){
@@ -55,9 +55,8 @@ var app = (function(){
 
 		var form = $(this);
 		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
+
 		var flag = true;
-		
-		
 
 		$.each(items, function(index, val){
 			var content = $(val).val();
@@ -70,13 +69,36 @@ var app = (function(){
 			} else {
 				$(this).removeClass('error-border');
 				$(this).siblings('.tooltip').remove();
-			};
+			}
 		});
 
-		if(flag){
+		if(flag = true){
 			submitForm(form);
-		};
+		}
+		
 	};	
+
+	var submitForm = function(form){
+		var url = form.attr('action');
+
+		var data = form.serialize();
+
+		$.ajax({
+			url: url,
+			type: 'POST',
+			dataType: 'json',
+			data: data
+		}).done(
+			function(data){
+			console.log('гуд');
+			}
+		).fail( function(){
+			console.log('фэйл');
+		});
+
+		console.log(data);
+	};
+
 
 	var controlForm = function(e){
 		e.preventDefault();
@@ -100,25 +122,7 @@ var app = (function(){
 
 	
 
-	var submitForm = function(form){
-		var url = form.attr('action');
-		var data = form.serialize();
-
-		$.ajax({
-			url: url,
-			type: 'POST',
-			dataType: 'json',
-			data: data
-		}).done( 
-			function(data){
-				console.log('Все гуд');
-			}
-		).fail( function(){
-			console.log('Ошибка');
-		});
-		
-		console.log(data);
-	};
+	
 
 
 	var showTooltip = function(target){
@@ -127,26 +131,11 @@ var app = (function(){
 		if($(target).siblings('.tooltip').length === 0){
 			if($(target).data('direction') === 'right') {
 				$(target).before(showTooltip);
-				// var visotaLABEL = $(target).parent('label').height();
-				// var vistotaINPUT = $(target).height();
-				// var visotaTOLTIP = $(target).siblings('.tooltip').height();
-				// var raznost = (visotaLABEL - vistotaINPUT);
-				// var	polINPUT = (vistotaINPUT / 2);
-				// var otstup = (polINPUT + raznost - visotaTOLTIP);
-				// $(target).siblings('.tooltip').css('top', otstup);
 
 
 			} else if($(target).data('direction') === 'left') {
 				$(target).before(showTooltip);
 				$(target).siblings('.tooltip').addClass('tooltip-left');
-				// var visotaLABEL = $(target).parent('label').height();
-				// var vistotaINPUT = $(target).height();
-				// var visotaTOLTIP = $(target).siblings('.tooltip').height();
-				// var raznost = (visotaLABEL - vistotaINPUT);
-				// var	polINPUT = (vistotaINPUT / 2);
-				// var	polTOLTIP = (visotaTOLTIP / 2);
-				// var otstup = (polINPUT + raznost - polTOLTIP)
-				// $(target).siblings('.tooltip').css('top', otstup);
 			};
 		}; 		
 	};
