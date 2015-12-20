@@ -4,7 +4,7 @@ $data = array();
 
 $data['status'] = "ok";
 
-header("Content-Type: application/json");
+header("Content-Type: app/json");
 
 echo json_encode($data);
 exit;
