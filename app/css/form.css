@@ -199,7 +199,7 @@ label{
     position: relative;
   width: 52px;
   height: 39px;
-left: 234px;
+left: 235px;
 top: -1px;
  background: #fcfbfa; /* Old browsers */
 background: -moz-linear-gradient(top, #fcfbfa 0%, #e9e8e8 100%); /* FF3.6-15 */
@@ -243,7 +243,6 @@ input::-webkit-input-placeholder {
 	position: absolute;
 	top: 51px;
 	left: 6px;
-	c
 }
 
 

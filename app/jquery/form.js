@@ -10,9 +10,9 @@ var app = (function(){
 		$('.form-bg, .close').on('click', hideForm);
 		$('.error-close').on('click', hideError);
 		$('.form-bg, .success-close').on('click', hideSuccess);
-		$('input, textarea, .input-file-box').on('change', clearForm);
+		$('input, textarea, .input-file').on('change', clearForm);
+		$('.input-file').on('change', clearFile);
 		$('.fd-reset').on('click', resetForm);
-		$('form').on('focusout', controlForm);
 		$('.input-file').on('change', ShowText);
 	};
 
@@ -41,6 +41,10 @@ var app = (function(){
 		$(this).siblings('.tooltip').remove();	
 	};
 
+	var clearFile = function(){
+		$('.input-file-box').removeClass('error-border');
+	};
+
 	var resetForm = function(){
 		$('.tooltip').remove();
 		$('.form').removeClass('error-border');
@@ -48,9 +52,7 @@ var app = (function(){
 
 	var ShowText = function(){
 		var textInBox = $(this).val();
-	
 		$('.text-file-box').html(textInBox.substring(12));
-
 
 	};
 
@@ -59,20 +61,25 @@ var app = (function(){
 		e.preventDefault();
 
 		var form = $(this);
-		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
+		var items = form.find('input, textarea, .input-file').not('.submit-form, .fd-submit');
 
 		var flag = true;
 
 		$.each(items, function(index, val){
 			var content = $(val).val();
+			var that = this;
 
-			if(content.length === 0){
-				$(this).addClass('error-border');
-				showTooltip(this);
-				flag = false;
+			if($(val).attr('type') == 'file'){
+					that = $(that).siblings('.input-file-box');
+				};
+
+			if(content.length === 0){			
+				$(that).addClass('error-border');
+				showTooltip(that);
+				flag = false;			
 			} else {
-				$(this).removeClass('error-border');
-				$(this).siblings('.tooltip').remove();
+				$(that).removeClass('error-border');
+				$(that).siblings('.tooltip').remove();
 			} 
 		});
 
@@ -97,36 +104,9 @@ var app = (function(){
 			$('.project-success-box').show();
 			}
 		).fail( function(){
-			console.log('фэйл');
 			$('.project-error').show();
 		});
 	};
-
-
-	var controlForm = function(e){
-		e.preventDefault();
-
-		var form = $(this);
-		var items = form.find('input, textarea, .input-file-box').not('.submit-form, .input-file, .fd-submit');
-
-		$.each(items, function(index, val){
-			var content = $(val).val();
-
-			if(content.length === 0){
-				$(this).addClass('error-border');
-				showTooltip(this);
-			} else {
-				$(this).removeClass('error-border');
-				$(this).siblings('.tooltip').remove();	
-			};
-		});
-	};
-
-
-	
-
-	
-
 
 	var showTooltip = function(target){
 		var showTooltip = "<div class='tooltip'><div class='error-button'>"+$(target).data('info')+"</div></div>";
@@ -142,6 +122,7 @@ var app = (function(){
 			};
 		}; 		
 	};
+
 
 	return{
 		init:init
