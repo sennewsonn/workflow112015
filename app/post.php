@@ -2,9 +2,9 @@
 
 $data = array();
 
-$data['status'] = "ok";
+$data['status'] = "Все хорошо";
 
-header("Content-Type: app/json");
+header("Content-Type: application/json");
 
 echo json_encode($data);
 exit;

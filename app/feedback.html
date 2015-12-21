@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/feedback.css">
 	<link rel="stylesheet" href="css/form.css">
-	<title>Sennewsonn | Frontend-developer</title>
+	<title>Sennewsonn | Обратная связь</title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="wrapper">
@@ -108,11 +109,8 @@
 
 <!--==================КАПЧА=================-->	
 		<p class="form-text cap-text">Введите код, указанный на картинке</p>
-		<div class="captcha-img">
-			<img src="img/code.png"  alt="Капча">
-		</div>
-		<label>
-			<input type="text" class="fd-captcha form" placeholder="Введите код" data-info="код капчи" data-direction="right">
+		
+		<div class="g-recaptcha" data-sitekey="6LfvhBMTAAAAANEzG5comi6thF1VEmgHBW34vXzs"></div>
 		</label>
 <!--========================================-->	
 

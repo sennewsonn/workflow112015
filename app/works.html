@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/works.css">
 	<link rel="stylesheet" href="css/form.css">
-	<title>Sennewsonn | Frontend-developer</title>
+	<title>Sennewsonn | Мои работы </title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="wrapper">
@@ -162,7 +163,7 @@
 
 	<div class="form-bg"><!-- Темный фон если вызвана форма --></div>
 	<div class="add-form">
-		<form class="form-container" action="/post.php" method="post">
+		<form class="form-container" action="/post.php" method="post" enctype="multipart/form-data">
 			<h4 class="add-title">Добавление проекта</h4>
 			<div class="close"></div>
 			<div class="input-cont">
@@ -182,13 +183,17 @@
 				</label>
 			<!-- ================ fin ================ -->
 
-			<!-- ========== КАРТИНКА ПРОЕКТА ========= 
+			<!-- ========== КАРТИНКА ПРОЕКТА ========= -->
 				<label>
 					<h2 class="project-title">Картинка проекта</h2>
-					<div class="input-file-box" data-info="изображение" data-direction="left"></div>
+
+					<div class="input-file-box" data-info="изображение" data-direction="left">
+					<div class="text-file-box"></div>
+
+					</div>
 					<input type="file" class="project-input input-file" placeholder="Загрузите изображение" name="image">
 				</label>
-			 ================ fin ================ -->
+			<!-- ================ fin ================ -->
 
 			<!-- ============ URL ПРОЕКТА ============ -->
 				<label>

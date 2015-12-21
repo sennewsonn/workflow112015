@@ -199,7 +199,7 @@ label{
     position: relative;
   width: 52px;
   height: 39px;
-left: 240px;
+left: 234px;
 top: -1px;
  background: #fcfbfa; /* Old browsers */
 background: -moz-linear-gradient(top, #fcfbfa 0%, #e9e8e8 100%); /* FF3.6-15 */
@@ -228,6 +228,23 @@ input::-webkit-input-placeholder {
 	font-size: 12px;
 }
 
+
+.text-file-box{
+	display: block;
+	max-height: 20px;
+  overflow: hidden;
+	white-space: nowrap;
+	font-family: "OpenSansRegular";
+	color: #3f3b3b;
+	font-size: 12px;
+	padding: 0px;
+	height: 40px;
+	width: 256px;
+	position: absolute;
+	top: 51px;
+	left: 6px;
+	c
+}
 
 
 

@@ -9,12 +9,13 @@ var app = (function(){
 		$('.add-site').on('click', showForm);
 		$('.form-bg, .close').on('click', hideForm);
 		$('.error-close').on('click', hideError);
-		$('.add-title').on('click', showSuccess);
 		$('.form-bg, .success-close').on('click', hideSuccess);
 		$('input, textarea, .input-file-box').on('change', clearForm);
 		$('.fd-reset').on('click', resetForm);
 		$('form').on('focusout', controlForm);
+		$('.input-file').on('change', ShowText);
 	};
+
 
 	var showForm = function(){
 		$('.form-bg').show();
@@ -45,10 +46,14 @@ var app = (function(){
 		$('.form').removeClass('error-border');
 	};
 
-	var showSuccess = function(){
-		$('.add-form').hide();
-		$('.project-success-box').show();
+	var ShowText = function(){
+		var textInBox = $(this).val();
+	
+		$('.text-file-box').html(textInBox.substring(12));
+
+
 	};
+
 
 	var checkForm = function(e){
 		e.preventDefault();
@@ -64,23 +69,21 @@ var app = (function(){
 			if(content.length === 0){
 				$(this).addClass('error-border');
 				showTooltip(this);
-				$('.project-error').show();
 				flag = false;
 			} else {
 				$(this).removeClass('error-border');
 				$(this).siblings('.tooltip').remove();
-			}
+			} 
 		});
 
-		if(flag = true){
+		if(flag == true){
 			submitForm(form);
-		}
-		
+		}		
 	};	
+
 
 	var submitForm = function(form){
 		var url = form.attr('action');
-
 		var data = form.serialize();
 
 		$.ajax({
@@ -90,13 +93,13 @@ var app = (function(){
 			data: data
 		}).done(
 			function(data){
-			console.log('гуд');
+			$('.add-form').hide();
+			$('.project-success-box').show();
 			}
 		).fail( function(){
 			console.log('фэйл');
+			$('.project-error').show();
 		});
-
-		console.log(data);
 	};
 
 
