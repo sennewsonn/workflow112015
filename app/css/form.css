@@ -228,6 +228,11 @@ input::-webkit-input-placeholder {
 	font-size: 12px;
 }
 
+.placeholder{
+	box-sizing: border-box;
+	font-family: "OpenSansLight";
+	font-size: 12px;
+}
 
 .text-file-box{
 	display: block;

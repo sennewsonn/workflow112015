@@ -14,6 +14,7 @@ var app = (function(){
 		$('.input-file').on('change', clearFile);
 		$('.fd-reset').on('click', resetForm);
 		$('.input-file').on('change', ShowText);
+
 	};
 
 
@@ -129,5 +130,7 @@ var app = (function(){
 	}
 }());
 
-app.init();
-
+	$(document).ready(function(){
+	  app.init();
+	  $('input, textarea').placeholder();
+	});
