@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/feedback.css">
 	<link rel="stylesheet" href="css/form.css">
+	<!--[if lt IE 9]>
+    <script src="bower/html5shiv/dist/html5shiv.js"></script>
+<![endif]-->
 	<title>Sennewsonn | Обратная связь</title>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
@@ -108,7 +111,7 @@
 <!--========================================-->	
 
 <!--==================КАПЧА=================-->	
-		<p class="form-text cap-text">Введите код, указанный на картинке</p>
+		<p class="form-text cap-text">Подтвердите, что вы не робот:</p>
 		
 		<div class="g-recaptcha" data-sitekey="6LfvhBMTAAAAANEzG5comi6thF1VEmgHBW34vXzs"></div>
 		</label>
@@ -119,9 +122,10 @@
 		<div class="clearfix"></div>
 	</div><!-- feed-box -->
 	</form>
-
-<script src="jquery/jquery.js"></script>
-<script src="jquery/form.js"></script>	
+	
+	<script src="bower/jquery/jquery.js"></script>
+	<script src="js/form.js"></script>
+	<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
 
 </article><!-- page-container page-feedback -->
 </div><!-- main-page-box -->

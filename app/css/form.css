@@ -65,6 +65,7 @@ label{
 	font-family: "OpenSansSemibold";
 	font-size: 12px;
 	padding: 0 6px;
+	background: #EB977A;
 	background-image: -moz-linear-gradient( 90deg, rgb(211,118,84) 0%, rgb(243,162,135) 90%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(211,118,84) 0%, rgb(243,162,135) 90%);
 	background-image: -ms-linear-gradient( 90deg, rgb(211,118,84) 0%, rgb(243,162,135) 90%);
@@ -217,7 +218,7 @@ textarea[type="text"],
 input[type="text"]{
 	box-sizing: border-box;
 	font-family: "OpenSansRegular";
-	color: #3f3b3b;
+	/*color: #3f3b3b;*/
 	font-size: 14px;
 	padding: 0px 8px;
 }
@@ -228,10 +229,15 @@ input::-webkit-input-placeholder {
 	font-size: 12px;
 }
 
-.placeholder{
+textarea[placeholder]{
 	box-sizing: border-box;
 	font-family: "OpenSansLight";
-	font-size: 12px;
+	font-size: 13px;
+	padding: 5px;
+}
+
+.placeholder{
+	color: #555;
 }
 
 .text-file-box{
@@ -266,6 +272,7 @@ input::-webkit-input-placeholder {
  height: 112px;
 	resize: none;
 	margin-bottom: 9px;
+	
 }
 
 

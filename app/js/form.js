@@ -1,4 +1,5 @@
-var app = (function(){
+ var app = (function(){
+
 
 	var init = function(){
 		setUpListeners();
